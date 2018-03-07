@@ -1,6 +1,6 @@
 \documentclass[12pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath}
+\usepackage{mathtools}
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
@@ -10,7 +10,9 @@
 }
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{multicol}
 
+\newcommand{\dert}[1]{\frac{d#1}{dt}}
 
 \renewcommand{\familydefault}{\sfdefault}
 \newcommand{\sectionbreak}{\clearpage}
@@ -25,15 +27,52 @@
 \author{Oli Dias}
 \title{Meteorologie - Summary}
 \begin{document}
-\maketitle
-\newpage
-\section{Lorenz Attraktor}
-Grundsätzlich: Visualisieren des Lorenz-Attraktors und mathematisches Beschreiben dieses Phänomens. Idealerweise finden von Sattel-Knoten-Bifurkationen. Im Skript p.43-46 Informationen zum Lorenz-Attraktor.\\
+	\maketitle
+	\newpage
+	\section{Lorenz Attraktor}
+	Grundsätzlich: Visualisieren des Lorenz-Attraktors und mathematisches Beschreiben dieses Phänomens. Idealerweise finden von Sattel-Knoten-Bifurkationen. Im Skript p.43-46 Informationen zum Lorenz-Attraktor.\\
 
-Ideen zum Vorgehen:
-\begin{itemize}
-	\item Visualisierung mit Abhängigkeiten zu den physikalischen Grössen (Temperaturänderungen, Viskosität, etc), die die Simulation verändern
-	\item Finden von Sattel-Knoten Bifurkation und eventuell Darstellen
-\end{itemize}
+	Ideen zum Vorgehen:
+	\begin{itemize}
+		\item Visualisierung mit Abhängigkeiten zu den physikalischen Grössen (Temperaturänderungen, Viskosität, etc), die die Simulation verändern
+		\item Finden von Sattel-Knoten Bifurkation und eventuell Darstellen
+	\end{itemize}
 
+	\section{Mathematics \& Climate pages 87 - 92}
+	\begin{multicols}{2}
+		\begin{subequations}
+			\label{Lorenz-Equations}
+			\begin{align}
+				\dert{x} &= -\sigma x + \sigma y,\\
+				\dert{y} &= \rho x - y - xz,\\
+				\dert{z} &= -\beta z + xy.
+			\end{align}
+		\end{subequations}
+
+		\begin{tabular}{l l}
+			x & hydrodynamic velocity\\
+			y & temparature\\
+			z & temparature gradient\\
+			\\
+			\( \sigma \) \& b & fix nach \( \sigma > 1 + \beta \)\\
+			\( \rho \) & varied\\
+		\end{tabular}
+	\end{multicols}
+
+	Any solution with \( x = y = 0 \) tends t zero as \( t \rightarrow \infty \)\\
+	All solutions are trapped in a bounded trapping set \( D \), that is a fixed neighbourhood of the origin.\\
+	The equations only yield the same result (\( \begin{bmatrix}x=0\\y=0\\z=0\end{bmatrix} \)) for the same input. So when this number is given the equations will always stand at the same position for  \( t \rightarrow \infty \).
+	The System can be linearized around the origin (0):
+	\begin{subequations}
+		\label{Lorenz-Equations}
+		\begin{align}
+			\dert{x} &= -\sigma x + \sigma y,\\
+			\dert{y} &= \rho x - y,\\
+			\dert{z} &= -\beta z.
+		\end{align}
+	\end{subequations}
+
+	The Z gets decoupled (no other equation needs Z nor it needs values of the other equations). Since \( \beta \rightarrow t\), every solution decays to \( z = 0 \hspace{5mm} t \rightarrow \infty \).
+
+	\( \rho \) passes through the critical value \( \rho_H\), a \textit{Hopf bifurcation} occurs. (\ldots) The linearized system goes from stable to unstable. Crossing Points: \( \pm i\sqrt{\frac{2\sigma(\sigma + 1)}{\sigma - \beta - 1}} \) Because of peridicity \( \rho \) must be well away from the critical points, or the function becomes even before the points subcritical (unstable). This can also show oscillatory behaviour.
 \end{document}
