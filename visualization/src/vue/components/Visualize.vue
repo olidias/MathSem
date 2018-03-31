@@ -1,11 +1,11 @@
 <template>
-  <canvas></canvas>
+  <canvas/>
 </template>
 
 <script>
-  export default {
-    name: "Visualize"
-  }
+export default {
+  name: 'Visualize',
+};
 </script>
 
 <style scoped>

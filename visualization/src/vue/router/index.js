@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import HelloWorld from '@/vue/components/HelloWorld';
 import Visualize from '@/vue/components/Visualize';
+import Explanation from '@/vue/components/Explanation';
 
 Vue.use(Router);
 
@@ -14,8 +15,13 @@ export default new Router({
     },
     {
       path: '/',
-      name: 'Visualize',
+      name: 'Visualisierung',
       component: Visualize,
+    },
+    {
+      path: '/explanation',
+      name: 'Beschreibung',
+      component: Explanation,
     },
   ],
 });

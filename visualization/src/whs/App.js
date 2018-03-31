@@ -1,6 +1,6 @@
 // Define the Whitestorm Modules here
 import {
-  App
+  App,
 } from 'whs';
 
 // Own Imports
