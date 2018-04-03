@@ -22,6 +22,9 @@
             class="nav-link"
             href="#/explanation">Beschreibung</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#/about">Über dieses Handout</a>
+        </li>
       </ul>
     </div>
   </div>

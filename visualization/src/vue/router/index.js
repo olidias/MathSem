@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import HelloWorld from '@/vue/components/HelloWorld';
 import Visualize from '@/vue/components/Visualize';
 import Explanation from '@/vue/components/Explanation';
+import About from '@/vue/components/About';
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/explanation',
       name: 'Beschreibung',
       component: Explanation,
+    },
+    {
+      path: '/about',
+      name: 'Über dieses Handout',
+      component: About,
     },
   ],
 });
