@@ -1,3 +1,5 @@
+# A dolphin (kde-filemanager) specific config
+.directory
 *.log
 *.aux
 *.pdf

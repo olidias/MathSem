@@ -1,0 +1,56 @@
+@import "~bootstrap/scss/bootstrap.scss"
+
+article
+ margin: auto
+ width: 80%
+
+// Typography
+
+// http://www.stubbornella.org/content/2013/07/01/easy-peasy-rem-conversion-with-sass/
+@function calculateRem($size)
+  //Default font size on html element is 100%, equivalent to 16px;
+  $remSize: $size / 16px
+  @return #{$remSize}rem
+
+@mixin fontSize($size)
+  font-size: $size
+  font-size: calculateRem($size)
+
+@for $i from 1 through 6
+  h#{$i}
+    margin-top: calculateRem((7 - $i) * 6px)
+    margin-bottom: .5rem
+    font-weight: 300
+    @include fontSize((7 - $i) * 6px)
+
+p, blockquote
+  margin-bottom: .5rem
+  font-weight: 300
+  width: 80%
+  @include fontSize(12px)
+
+blockquote
+  @extend .blockquote
+  @extend .text-justify
+  //font-weight: 100
+  margin-left: 2rem
+  width: 70%
+  border-left: 2px #4e555b
+
+.teaser
+  font-size: 1.125rem
+  margin-bottom: 1rem
+  font-weight: 300
+  max-width: 80%
+
+@include media-breakpoint-up(sm)
+  @for $i from 1 through 6
+    h#{$i}
+      @include fontSize((7 - $i) * 8px)
+
+  p, blockquote
+    @include fontSize(16px)
+
+
+  .teaser
+    font-size: 1.5rem
