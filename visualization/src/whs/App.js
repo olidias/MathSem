@@ -1,7 +1,5 @@
 // Define the Whitestorm Modules here
-import {
-  App,
-} from 'whs';
+import App from '@whs';
 
 // Own Imports
 
