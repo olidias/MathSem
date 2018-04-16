@@ -1,13 +1,19 @@
 <template>
-  <canvas/>
+  <div id="WHS-Playground" />
 </template>
 
 <script>
+import App from '../../whs/App';
+
 export default {
   name: 'Visualize',
+  mounted: () => App(document.getElementById('WHS-Playground')),
 };
 </script>
 
 <style scoped>
-  /* Style + references that are just used by this component */
+  canvas {
+    width: 100%;
+    height: 500px;
+  }
 </style>
