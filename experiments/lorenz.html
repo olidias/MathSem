@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lorenz</title>
+</head>
+
+<body>
+<form>
+	Rho: <input type="text" id="rho"><br/>
+	Sigma: <input type="text" name="sigma"> <br/>
+	Beta: <input type="text" name="beta"> <br/>
+	Iterations: <input type="text" name="iterations"> <br/>
+	<button onclick="Calculate()">Calculate </button>
+</form>
+<script type="text/javascript" >
+function Calculate(){
+	var r = document.getElementById('rho').value;
+	var s = document.getElementById('sigma').value;
+	var beta = document.getElementById('beta').value;
+	var it = document.getElementById('iterations').value;
+	var arr = {};
+	for(var i=0;i<it;i++){
+		
+		arr[i] = new Coordinate(x,y,z);
+	}
+
+	
+
+
+	console.log("rhos value is "+r);
+}
+
+class Coordinate{
+	constructor(x,y,z){
+		this.x = x;
+		this.y = y;
+		this.z = z;
+	}
+
+}
+</script>
+
+</body>
+</html>
