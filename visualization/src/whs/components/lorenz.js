@@ -10,7 +10,7 @@ export class Coordinate {
 export function Calculate() {
   const r = 28; /* document.getElementById('rho').value; */
   const s = 10; /* document.getElementById('sigma').value; */
-  const beta = 8/3; /* document.getElementById('beta').value; */
+  const beta = 8 / 3; /* document.getElementById('beta').value; */
   const it = 2500;
 
   let x = 0.1;
@@ -21,7 +21,8 @@ export function Calculate() {
   const arr = [];
   arr.push(new Coordinate(x, y, z));
 
-  for (let i = 0; i < it; i++) {
+  for (let i = 0; i < it; i += 1) {
+    /* eslint-disable no-mixed-operators */
     x = arr[i].x + ((s * y) - (s * x)) * delta;
     y = arr[i].y + ((-x * z) + (r * x) - y) * delta;
     z = arr[i].z + ((x * y) - (beta * z)) * delta;
