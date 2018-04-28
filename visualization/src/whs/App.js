@@ -31,7 +31,7 @@ export default (element) => {
   ]);
 
   const lorenzPoints = Lorenz.Calculate();
-  lorenzPoints.forEach(function(val,i){
+  lorenzPoints.forEach(val => {
     new WHS.Sphere({
       geometry:{
         radius: 0.1,
@@ -43,7 +43,7 @@ export default (element) => {
        color: 0xF2F2F2
      }),
 
-      position: new THREE.Vector3(val.x,val.y,val.z)
+      position: val
     }).addTo(app);
   });
 

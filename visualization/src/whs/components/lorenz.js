@@ -1,12 +1,6 @@
-export class Coordinate {
-  constructor(x, y, z) {
-    this.x = x;
-    this.y = y;
-    this.z = z;
-  }
-}
+import * as THREE from 'three';
 
-
+/* eslint-disable */
 export function Calculate() {
   const r = 28; /* document.getElementById('rho').value; */
   const s = 10; /* document.getElementById('sigma').value; */
@@ -19,14 +13,14 @@ export function Calculate() {
   const delta = 0.01;
 
   const arr = [];
-  arr.push(new Coordinate(x, y, z));
+  arr.push(new THREE.Vector3(x, y, z));
 
   for (let i = 0; i < it; i += 1) {
     /* eslint-disable no-mixed-operators */
     x = arr[i].x + ((s * y) - (s * x)) * delta;
     y = arr[i].y + ((-x * z) + (r * x) - y) * delta;
     z = arr[i].z + ((x * y) - (beta * z)) * delta;
-    arr.push(new Coordinate(x, y, z));
+    arr.push(new THREE.Vector3(x, y, z));
   }
 
   return arr;
