@@ -1,5 +1,8 @@
 <template>
-  <div id="WHS-Playground" />
+  <div>
+    <button @click="move">Click me!</button>
+    <div id="WHS-Playground" />
+  </div>
 </template>
 
 <script>
@@ -10,10 +13,14 @@ const app = new WHS.WHSApp();
 /* eslint-disable */
 export default {
   name: 'Visualize',
-  mounted: () => {
-    app.init(document.getElementById('WHS-Playground'));
-    app.render();
-  },
+  mounted: () => app.render(document.getElementById('WHS-Playground')),
+  methods: {
+    move: () => {
+      app.viewPoints.forEach(i => {
+        i.position.x = 0;
+      })
+    }
+  }
 };
 </script>
 

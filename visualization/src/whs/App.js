@@ -4,10 +4,16 @@ import * as WHS from 'whs';
 import * as THREE from 'three';
 
 export class WHSApp {
-  app;
-  lorenzPoints;
 
-  init(element) {
+  constructor() {
+    this.app = null;
+    this.lorenzPoints = [];
+    this.viewPoints = [];
+  }
+
+  render(element) {
+
+    // Prepare stage
     this.app = new WHS.App([
       new WHS.ElementModule(element),
       new WHS.SceneModule(),
@@ -30,12 +36,13 @@ export class WHSApp {
       new WHS.OrbitControlsModule(),
       new WHS.ResizeModule()
     ]);
-  }
 
-  render() {
+    // Calculate Positions
     this.lorenzPoints = this.calculate();
-    this.lorenzPoints.forEach(val => {
-      new WHS.Sphere({
+
+    // Create Visual Element for each position
+    for (let i = 0; i < this.lorenzPoints.length; i++) {
+      let sphere = new WHS.Sphere({
         geometry: {
           radius: 0.1,
           widthSegments: 5,
@@ -46,24 +53,22 @@ export class WHSApp {
           color: 0xF2F2F2
         }),
 
-        position: val
-      }).addTo(this.app);
-    });
+        position: this.lorenzPoints[i],
+      });
+      this.viewPoints[i] = sphere;
+      this.viewPoints[i].addTo(this.app);
+    }
 
-
+    // Create Light
     new WHS.AmbientLight({
       light: {
         intensity: 0.4
       }
     }).addTo(this.app);
 
-// Start the app
+    // Start the app
     this.app.start();
   };
-
-  unrender() {
-    this.app.disposeModules();
-  }
 
   calculate() {
     const r = 28; /* document.getElementById('rho').value; */
