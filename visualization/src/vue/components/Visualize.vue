@@ -3,11 +3,17 @@
 </template>
 
 <script>
-import App from '../../whs/App';
+import * as WHS from '../../whs/App';
 
+const app = new WHS.WHSApp();
+
+/* eslint-disable */
 export default {
   name: 'Visualize',
-  mounted: () => App(document.getElementById('WHS-Playground')),
+  mounted: () => {
+    app.init(document.getElementById('WHS-Playground'));
+    app.render();
+  },
 };
 </script>
 
