@@ -10,11 +10,6 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
-      path: '/vue',
-      name: 'HelloWorld',
-      component: HelloWorld,
-    },
-    {
       path: '/',
       name: 'Visualisierung',
       component: Interactive,
