@@ -9,6 +9,7 @@ export class WHSApp {
     this.app = null;
     this.lorenzPoints = [];
     this.viewPoints = [];
+    this.running = false;
   }
 
   render(element, rho = 28, sigma = 10, beta = 8 / 3) {
@@ -68,12 +69,22 @@ export class WHSApp {
 
     // Start the app
     this.app.start();
+    this.running = true;
   };
 
   rerender(rho, sigma, beta) {
     this.lorenzPoints = this.calculate(rho, sigma, beta);
     for (let i = 0; i < this.viewPoints.length; i++) {
       this.viewPoints[i].position = this.lorenzPoints[i];
+    }
+  }
+
+  destruct() {
+    if (this.running) {
+      this.app.render = false;
+      this.app.stop();
+      this.app.disposeModules();
+      this.app = null;
     }
   }
 

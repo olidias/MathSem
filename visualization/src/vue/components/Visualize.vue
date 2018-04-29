@@ -5,9 +5,9 @@
 </template>
 
 <script>
-import * as WHS from '../../whs/App';
+  import * as WHS from '../../whs/App';
 
-const app = new WHS.WHSApp();
+  const app = new WHS.WHSApp();
 
 export default {
   name: 'Visualize',
@@ -30,7 +30,9 @@ export default {
   mounted: function() {
     app.render(document.getElementById('WHS-Playground'), this.rho, this.sigma, this.beta);
   },
-
+  beforeDestroy() {
+    app.destruct();
+  },
   watch: {
     rho() { app.rerender(this.rho, this.sigma, this.beta); },
     sigma() { app.rerender(this.rho, this.sigma, this.beta); },
