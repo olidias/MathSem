@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import HelloWorld from '@/vue/components/HelloWorld';
-import Interactive from '@/vue/components/Interactive';
+import Visualization from '@/vue/components/Visualize';
 import Explanation from '@/vue/components/Explanation';
 import About from '@/vue/components/About';
 
@@ -12,8 +11,8 @@ export default new Router({
     {
       path: '/',
       name: 'Visualisierung',
-      component: Interactive,
-      props: { rho: 10, sigma: 10, beta: 8 / 3 },
+      component: Visualization,
+      props: { rho: 10, sigma: 10, beta: 8 / 3, disabled: false },
     },
     {
       path: '/explanation',

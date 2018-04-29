@@ -1,13 +1,42 @@
 <template>
   <div class="WHS-Container">
+    <form id="input-form">
+      <div class="form-group row">
+        <label for="rho-input">rho</label>
+        <input
+          id="rho-input"
+          v-model="rho"
+          :readonly="disabled"
+          :class="{'form-control-plaintext': disabled, 'form-control': !disabled}"
+          type="number">
+      </div>
+      <div class="form-group row">
+        <label for="sigma-input">sigma</label>
+        <input
+          id="sigma-input"
+          v-model="sigma"
+          :readonly="disabled"
+          :class="{'form-control-plaintext': disabled, 'form-control': !disabled}"
+          type="number">
+      </div>
+      <div class="form-group row">
+        <label for="beta-input">beta</label>
+        <input
+          id="beta-input"
+          v-model="beta"
+          :readonly="disabled"
+          :class="{'form-control-plaintext': disabled, 'form-control': !disabled}"
+          type="number">
+      </div>
+    </form>
     <div id="WHS-Playground"/>
   </div>
 </template>
 
 <script>
-  import * as WHS from '../../whs/App';
+import * as WHS from '../../whs/App';
 
-  const app = new WHS.WHSApp();
+const app = new WHS.WHSApp();
 
 export default {
   name: 'Visualize',
@@ -23,6 +52,10 @@ export default {
     beta: {
       type: Number,
       required: true,
+    },
+    disabled: {
+      type: Boolean,
+      default: true,
     },
   },
 
@@ -42,8 +75,21 @@ export default {
 </script>
 
 <style scoped>
+
   .WHS-Container {
-    width: 100%;
-    height: 75%;
+    position: relative;
+  }
+
+  #input-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 20px;
+    color: #FFF;
+  }
+
+  .form-control-plaintext {
+    color: white;
   }
 </style>
