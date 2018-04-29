@@ -72,8 +72,8 @@ export class WHSApp {
 
   rerender(rho, sigma, beta) {
     this.lorenzPoints = this.calculate(rho, sigma, beta);
-    for (let i = 0; i < app.viewPoints.length; i++) {
-      app.viewPoints[i].position = this.lorenzPoints[i];
+    for (let i = 0; i < this.viewPoints.length; i++) {
+      this.viewPoints[i].position = this.lorenzPoints[i];
     }
   }
 

@@ -1,8 +1,5 @@
 <template>
-  <div>
-    <span>
-      rho: {{ rho }}, sigma: {{ sigma }}, beta: {{ beta }}
-    </span>
+  <div class="WHS-Container">
     <div id="WHS-Playground"/>
   </div>
 </template>
@@ -31,33 +28,20 @@ export default {
 
   /* eslint-disable */
   mounted: function() {
-    console.log(this);
     app.render(document.getElementById('WHS-Playground'), this.rho, this.sigma, this.beta);
   },
 
   watch: {
-    rho(newer) {
-      console.log(this);
-      console.log("Newer" + newer);
-      app.rerender(this.rho, this.sigma, this.beta);
-    },
-    sigma(newer) {
-      console.log(this);
-      console.log("Newer" + newer);
-      app.rerender(this.rho, this.sigma, this.beta);
-    },
-    beta(newer) {
-      console.log(this);
-      console.log("Newer" + newer);
-      app.rerender(this.rho, this.sigma, this.beta);
-    },
+    rho() { app.rerender(this.rho, this.sigma, this.beta); },
+    sigma() { app.rerender(this.rho, this.sigma, this.beta); },
+    beta() { app.rerender(this.rho, this.sigma, this.beta); },
   }
 };
 </script>
 
 <style scoped>
-  canvas {
+  .WHS-Container {
     width: 100%;
-    height: 500px;
+    height: 75%;
   }
 </style>
