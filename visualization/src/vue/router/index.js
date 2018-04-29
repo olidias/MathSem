@@ -18,6 +18,7 @@ export default new Router({
       path: '/',
       name: 'Visualisierung',
       component: Visualize,
+      props: { rho: 10, sigma: 10, beta: 8 / 3 },
     },
     {
       path: '/explanation',

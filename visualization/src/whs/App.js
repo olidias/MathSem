@@ -11,7 +11,7 @@ export class WHSApp {
     this.viewPoints = [];
   }
 
-  render(element) {
+  render(element, rho = 28, sigma = 10, beta = 8 / 3) {
 
     // Prepare stage
     this.app = new WHS.App([
@@ -38,7 +38,7 @@ export class WHSApp {
     ]);
 
     // Calculate Positions
-    this.lorenzPoints = this.calculate();
+    this.lorenzPoints = this.calculate(rho, sigma, beta);
 
     // Create Visual Element for each position
     for (let i = 0; i < this.lorenzPoints.length; i++) {
@@ -70,10 +70,14 @@ export class WHSApp {
     this.app.start();
   };
 
-  calculate() {
-    const r = 28; /* document.getElementById('rho').value; */
-    const s = 10; /* document.getElementById('sigma').value; */
-    const beta = 8 / 3; /* document.getElementById('beta').value; */
+  rerender(rho, sigma, beta) {
+    this.lorenzPoints = this.calculate(rho, sigma, beta);
+    for (let i = 0; i < app.viewPoints.length; i++) {
+      app.viewPoints[i].position = this.lorenzPoints[i];
+    }
+  }
+
+  calculate(rho = 10, sigma = 10, beta = 8 / 3) {
     const it = 2500;
 
     let x = 0.1;
@@ -86,8 +90,8 @@ export class WHSApp {
 
     for (let i = 0; i < it; i += 1) {
       /* eslint-disable no-mixed-operators */
-      x = arr[i].x + ((s * y) - (s * x)) * delta;
-      y = arr[i].y + ((-x * z) + (r * x) - y) * delta;
+      x = arr[i].x + ((sigma * y) - (sigma * x)) * delta;
+      y = arr[i].y + ((-x * z) + (rho * x) - y) * delta;
       z = arr[i].z + ((x * y) - (beta * z)) * delta;
       arr.push(new THREE.Vector3(x, y, z));
     }
