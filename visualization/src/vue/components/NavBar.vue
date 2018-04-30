@@ -13,16 +13,10 @@
       aria-label="Toggle navigation">
       <span class="navbar-toggler-icon" />
     </button>
-    <div
-      id="navbarNav"
-      class="collapse navbar-collapse">
+    <div id="navbarNav" class="collapse navbar-collapse">
       <ul class="navbar-nav">
-        <li
-          v-for="route in routes"
-          :key="route.path">
-          <router-link
-            :to="route.path"
-            class="nav-link">
+        <li v-for="route in routes" :key="route.path">
+          <router-link :to="route.path" class="nav-link">
             {{ route.name }}
           </router-link>
         </li>
