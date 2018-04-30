@@ -17,15 +17,14 @@
       id="navbarNav"
       class="collapse navbar-collapse">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#/explanation">Beschreibung</a>
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link"
-            href="#/about">Über dieses Handout</a>
+        <li
+          v-for="route in routes"
+          :key="route.path">
+          <router-link
+            :to="route.path"
+            class="nav-link">
+            {{ route.name }}
+          </router-link>
         </li>
       </ul>
     </div>
@@ -33,8 +32,13 @@
 </template>
 
 <script>
+import routeList from '../router';
+
 export default {
   name: 'NavBar',
+  data: () => ({
+    routes: routeList,
+  }),
 };
 </script>
 
