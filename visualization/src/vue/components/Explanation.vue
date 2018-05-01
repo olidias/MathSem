@@ -42,10 +42,17 @@
       </section>
       <section>
         <header>
-          <h2>Variablen</h2>
+          <h2>Systemparameter</h2>
         </header>
         <main>
-          <p>Test</p>
+          <dl>
+            <dt>
+              &#961; <!-- rho -->
+            </dt>
+            <dd>
+              Test
+            </dd>
+          </dl>
         </main>
       </section>
       <section>
@@ -54,6 +61,14 @@
         </header>
         <main>
           <p>Test</p>
+        </main>
+      </section>
+      <section>
+        <header>
+          <h2>Eigenschaften</h2>
+        </header>
+        <main>
+          <h3>Caostheorie</h3>
         </main>
       </section>
     </main>
