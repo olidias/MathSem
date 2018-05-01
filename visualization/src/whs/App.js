@@ -26,8 +26,9 @@ export class WHSApp {
           z: 50
         }
       }),
+      //0xCDCDCD
       new WHS.RenderingModule({
-        bgColor: 0x162129,
+        bgColor:  0x4A555C,
 
         renderer: {
           antialias: true,
@@ -47,16 +48,13 @@ export class WHSApp {
     for (let i = 0; i < this.lorenzPoints.length; i++) {
       let sphere = new WHS.Sphere({
         geometry: {
-          radius: 0.1,
+          radius: 0.2,
           widthSegments: 5,
           heightSegments: 5
         },
 
-        //(this.lorenzPoints[i].y+10)/20,(this.lorenzPoints[i].z+10)/20
-
-
         material: new THREE.MeshPhongMaterial({
-          color: new THREE.Color((this.lorenzPoints[i].x+10)/20, 0,0)
+          color: new THREE.Color((this.lorenzPoints[i].x+10)/20, (this.lorenzPoints[i].y+10)/20, (this.lorenzPoints[i].z)/30)
         }),
 
 
@@ -80,27 +78,6 @@ export class WHSApp {
     this.app.get('scene').add(axis);
 
 
-    // const loader = new THREE.FontLoader();
-    // console.log(1);
-    // loader.load( './fonts/helvetiker_regular.typeface.json', function ( font ) {
-    //   const textGeometry = new THREE.TextGeometry("Y", {
-    //     font: font,
-    //     size: 200,
-    //     height: 5,
-    //     curveSegments: 12
-    //   });
-    //
-    //   let textMesh = new THREE.Mesh(textGeometry, material);
-    //   textMesh.position.z = 0;
-    //   textMesh.position.x = -2;
-    //   textMesh.position.y = 2;
-    //
-    //
-    //   mesh.rotation = camera.rotation;
-    //   this.app.get('scene').add(textMesh);
-    // });
-
-
     // Start the app
     this.app.start();
     this.running = true;
@@ -110,7 +87,11 @@ export class WHSApp {
     this.lorenzPoints = this.calculate(rho, sigma, beta);
     for (let i = 0; i < this.viewPoints.length; i++) {
       this.viewPoints[i].position = this.lorenzPoints[i];
+      this.viewPoints[i].material.color.r = (this.lorenzPoints[i].x+10)/20;
+      this.viewPoints[i].material.color.g = (this.lorenzPoints[i].y+10)/20;
+      this.viewPoints[i].material.color.b = this.lorenzPoints[i].z/30;
     }
+
   }
 
   destruct() {
@@ -122,7 +103,7 @@ export class WHSApp {
     }
   }
 
-  calculate(rho = 10, sigma = 10, beta = 8 / 3) {
+  calculate(rho = 28, sigma = 10, beta = 8 / 3) {
     const it = 2500;
 
     let x = 0.1;

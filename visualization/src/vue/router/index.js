@@ -7,7 +7,7 @@ export default [
     path: '/',
     name: 'Visualisierung',
     component: Visualization,
-    props: { rho: 10, sigma: 10, beta: 8 / 3, disabled: false },
+    props: { rho: 28, sigma: 10, beta: 8 / 3, disabled: false },
   },
   {
     path: '/explanation',

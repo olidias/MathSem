@@ -30,6 +30,17 @@
       </div>
     </form>
     <div id="WHS-Playground"/>
+    <div id="caption">
+      <p>
+        <label id="x-axis">X-Achse: Kontinuitätsgleichung</label>
+      </p>
+      <p>
+        <label id="y-axis">Y-Achse: Navier-Stokes Gleichung</label>
+      </p>
+      <p>
+        <label id="z-axis">Z-Achse: Temperaturgleichung</label>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -91,5 +102,20 @@ export default {
 
   .form-control-plaintext {
     color: white;
+  }
+  #caption{
+    position: absolute;
+    margin: -11rem 0 0 1.5rem;
+    width: 90%;
+    color: white;
+  }
+  @media (max-width: 650px){
+    input {
+      max-width: 5rem;
+      margin-left: 1em;
+    }
+    .form-group{
+      width: 100%
+    }
   }
 </style>
