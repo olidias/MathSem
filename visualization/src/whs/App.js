@@ -2,6 +2,7 @@
 // Define the Whitestorm Modules here
 import * as WHS from 'whs';
 import * as THREE from 'three';
+import {CameraComponent as camera} from "whs";
 
 export class WHSApp {
 
@@ -13,11 +14,12 @@ export class WHSApp {
   }
 
   render(element, rho = 28, sigma = 10, beta = 8 / 3) {
-
     // Prepare stage
+    let scene = new WHS.SceneModule();
+
     this.app = new WHS.App([
       new WHS.ElementModule(element),
-      new WHS.SceneModule(),
+      scene,
       new WHS.CameraModule({
         position: {
           y: 10,
@@ -50,12 +52,17 @@ export class WHSApp {
           heightSegments: 5
         },
 
+        //(this.lorenzPoints[i].y+10)/20,(this.lorenzPoints[i].z+10)/20
+
+
         material: new THREE.MeshPhongMaterial({
-          color: 0xF2F2F2
+          color: new THREE.Color((this.lorenzPoints[i].x+10)/20, 0,0)
         }),
+
 
         position: this.lorenzPoints[i],
       });
+
       this.viewPoints[i] = sphere;
       this.viewPoints[i].addTo(this.app);
     }
@@ -66,6 +73,33 @@ export class WHSApp {
         intensity: 0.4
       }
     }).addTo(this.app);
+
+    // Display Coordinates
+
+    const axis = new THREE.AxisHelper(30);
+    this.app.get('scene').add(axis);
+
+
+    // const loader = new THREE.FontLoader();
+    // console.log(1);
+    // loader.load( './fonts/helvetiker_regular.typeface.json', function ( font ) {
+    //   const textGeometry = new THREE.TextGeometry("Y", {
+    //     font: font,
+    //     size: 200,
+    //     height: 5,
+    //     curveSegments: 12
+    //   });
+    //
+    //   let textMesh = new THREE.Mesh(textGeometry, material);
+    //   textMesh.position.z = 0;
+    //   textMesh.position.x = -2;
+    //   textMesh.position.y = 2;
+    //
+    //
+    //   mesh.rotation = camera.rotation;
+    //   this.app.get('scene').add(textMesh);
+    // });
+
 
     // Start the app
     this.app.start();
