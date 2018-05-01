@@ -1,3 +1,5 @@
+% !TeX spellcheck = de_DE
+
 \documentclass[11pt]{beamer}
 \usepackage[utf8]{inputenc}
 \usepackage[ngerman]{babel}
@@ -6,13 +8,14 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{subfiles}
+\usepackage{hyperref}
 
 
 
 \usetheme{default}
 
-\setbeamercovered{transparent}
-\setbeamertemplate{navigation symbols}{}
+%\setbeamercovered{transparent}
+%\setbeamertemplate{navigation symbols}{}
 
 \title{Lorenz Attraktor}
 \subtitle{} % TODO: Brauchen wir das?
@@ -25,5 +28,6 @@
 
 \begin{document}
     \subfile{intro}
-
+    \subfile{physics}
+    \subfile{scenarios}
 \end{document}
