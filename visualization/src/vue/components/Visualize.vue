@@ -32,13 +32,13 @@
     <div id="WHS-Playground"/>
     <div id="caption">
       <p>
-        <label id="x-axis">X-Achse: Kontinuitätsgleichung</label>
+        <label id="x-axis" style="color:red;">X-Achse:</label> <label> Kontinuitätsgleichung</label>
       </p>
       <p>
-        <label id="y-axis">Y-Achse: Navier-Stokes Gleichung</label>
+        <label id="y-axis" style="color:green;">Y-Achse:</label> <label> Navier-Stokes Gleichung</label>
       </p>
       <p>
-        <label id="z-axis">Z-Achse: Temperaturgleichung</label>
+        <label id="z-axis" style="color:blue;">Z-Achse:</label> <label> Temperaturgleichung</label>
       </p>
     </div>
   </div>
@@ -109,6 +109,7 @@ export default {
     width: 90%;
     color: white;
   }
+  
   @media (max-width: 650px){
     input {
       max-width: 5rem;
