@@ -4,15 +4,34 @@
 \documentclass[presentation.tex]{subfiles}
 
 \begin{document}
+	\begin{frame}{Physik}{Gleichungen des Lorenzsystemes}
+		\begin{block}{Umdrehungsgeschwindigkeit}
+			\begin{equation}
+				\dot{x} = \sigma(y - z)
+			\end{equation}
+		\end{block}
+		\begin{block}{Horizontale Temparaturvariation}
+			\begin{equation}
+				\dot{y} = x(\rho - z) - y
+			\end{equation}
+		\end{block}
+		\begin{block}{Vertikale Temparaturvariation}
+			\begin{equation}
+				\dot{z} = xy - \beta z
+			\end{equation}
+		\end{block}
+	\end{frame}
+	
 	\begin{frame}{Physik}{Energieerhaltungssätze}
 		\begin{columns}[c]
 			\begin{column}{.3\textwidth}
-				Dichte
+				\begin{block}{Dichte}
+				\end{block}
 			\end{column}
 			\begin{column}{.3\textwidth}
 				Geschwindigkeit
 			\end{column}
-			\begin{column}{0.3\textwidth}
+			\begin{column}{.3\textwidth}
 				Temperatur
 			\end{column}
 		\end{columns}
@@ -27,33 +46,13 @@
 			\end{column}
 			\begin{column}{.3\textwidth}
 				\begin{block}{Sekundär}
-					Geschwindigkeit
+					Gravitation
 				\end{block}
 			\end{column}
 			\begin{column}{0.3\textwidth}
 				\begin{block}{Tertiär}
-					Temperatur
+					Coroliskraft
 				\end{block}
-			\end{column}
-		\end{columns}
-	\end{frame}
-
-	\begin{frame}{Physik}{Gleichungen des Lorenzsystemes}
-		\begin{columns}[c]
-			\begin{column}{.5\textwidth}
-				\begin{block}{Kontinuitätsgleichung}
-				\end{block}
-				\begin{block}{Navier-Stokes Gleichung}
-				\end{block}
-				\begin{block}{Temperaturgleichung}
-				\end{block}
-			\end{column}
-			\begin{column}{.5\textwidth}
-				\begin{align*}
-				\dot{x} &= -\sigma x + \sigma y\\
-				\dot{y} &= \rho x - <- xz\\
-				\dot{z} &= -\beta z + xy\\
-				\end{align*}
 			\end{column}
 		\end{columns}
 	\end{frame}
