@@ -30,6 +30,17 @@
       </div>
     </form>
     <div id="WHS-Playground"/>
+    <div id="caption">
+      <p>
+        <label id="x-axis" style="color:red;">X-Achse:</label> <label> Durchschn. Windgeschwindigkeit</label>
+      </p>
+      <p>
+        <label id="y-axis" style="color:green;">Y-Achse:</label> <label>Temperatur</label>
+      </p>
+      <p>
+        <label id="z-axis" style="color:blue;">Z-Achse:</label> <label>Temperaturgradient</label>
+      </p>
+    </div>
   </div>
 </template>
 
@@ -89,6 +100,16 @@ export default {
     color: #FFF;
   }
 
+  .form-control-plaintext {
+    color: white;
+  }
+  #caption{
+    position: absolute;
+    margin: -11rem 0 0 1.5rem;
+    width: 90%;
+    color: white;
+  }
+
   @media (max-width: 650px){
     input {
       max-width: 5rem;
@@ -96,6 +117,9 @@ export default {
     }
     .form-group{
       width: 100%
+    }
+    #caption{
+      display:none;
     }
   }
 </style>
