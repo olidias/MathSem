@@ -1,17 +1,17 @@
 # Introduction (Oli)
-Edward Lorenz brachte im Jahre 1972 ein Paper mit dem Titel: Löst ein Flügelschlag eines Schmetterlings in Brasilien ein Tornado in Texas aus? " heraus. Aussergewöhnlicherweise stoss dieses Paper auf reges Interesse in der Bevölkerung. Dieser Effekt wird Butterfly Effect genannt und wird gerne für ein allgemeines Konzept für 'kleine Ereignisse, die grosse und weitverbreitete Konsequenzen haben' verwendet. Sogar in Filmen wie Mr.Nobody/The butterfly effect und Bücher kommt der Butterfly Effect vor. Wir wollen uns nun konkret damit befassen und sehen, ob wirklich etwas dran ist.
+Edward Lorenz brachte im Jahre 1972, 3 Jahre nachdem er sein berühmtes Paper zum Lorenz-Modell publizierte, ein weiteresPaper mit dem Titel: Löst ein Flügelschlag eines Schmetterlings in Brasilien ein Tornado in Texas aus? " heraus. Aussergewöhnlicherweise stoss dieses Paper auf reges Interesse in der Bevölkerung. Dieser Effekt wird Butterfly Effect genannt und wird gerne für ein allgemeines Konzept für 'kleine Ereignisse, die grosse und weitverbreitete Konsequenzen haben' verwendet. Sogar in Filmen wie Mr.Nobody/The butterfly effect kommt der Butterfly Effect vor. Wir wollen uns nun konkret damit befassen und sehen, ob wirklich etwas dran ist.
 
 # Attractor (Oli)
 Menge von Werten, zu welcher sich ein System zu entwickeln tendiert. 
-Strange attraktor: zum einen wiedererkennbares System (attraktor), aber innerhalb des Systems können sich zwei Punkte zum einen Zeitpunkt unmittelbar nebeneinander befinden und im anderen weit weg voneinander. Das heisst also, kleinste Parameteränderungen haben eine grosse Unterschiede zur vorherigen Lösungen zur Folge. Dies hat auch mit Fraktalen zu tun, denn auch diese haben wiederkehrende Muster. Berühmte Fraktale sind Mandelbrot Fraktale // Insert gif!
+Strange attraktor: zum einen wiedererkennbares System (attraktor), aber innerhalb des Systems können sich zwei Punkte zum einen Zeitpunkt unmittelbar nebeneinander befinden und im anderen weit weg voneinander. Das heisst also, kleinste Parameteränderungen haben grosse Unterschiede zur vorherigen Lösungen zur Folge. 
+strange attractors werden manchmal auch mit Fraktalen in Verbindung gebracht, denn auch diese haben wiederkehrende Muster, aber geringe Parameteränderungen lösen grosse Veränderung innerhalb des Systems aus. Berühmte Fraktale sind Mandelbrot Fraktale // Insert gif!
 
 Um euch eine bessere Vorstellung zum Lorenz Modell zu geben, haben wir eine kleine Webapp erstellt, womit ihr mit den Parameter etwas rumspielen könnt und das Modell entsprechend neu zeichnen könnt. Am besten geht ihr mit eurem Laptop auf lorenz.olidias.ch, ihr könnt aber auch mit dem Handy den QR-Code scannen und das gesamte mobile durchspielen. 
 
 
 
 # Analyse der Gleichungen (Oli)
-Wie man vielleicht erkennen kann, repräsentiert das Modell die Luftströme in einer gegebenen 
-Diese Gleichungen enthalten die Dichte, Geschwindigkeit und Temperatur der Atmosphäre und stellen diese physikalischen Werte formalisiert dar. Lorenz wollte daraus nun ein Modell zur Wetterprognose erstellen. Basierend auf vorgehende Werke von Saltzman startete Lorenz mit den hyrodynamischen Gleichungen und verfolgte ein systematisches Näherungsvorgehen, womit er auf diese drei dargestellten Gleichungen stoss.
+Diese drei Gleichungen enthalten viele physikalische Eigenschaften wie die Dichte, Geschwindigkeit und Temperatur der Atmosphäre und stellen diese physikalischen Werte formalisiert dar. Lorenz wollte aus den bereits existierenden Gleichungen der Hydrodynamik nun ein Modell zur Wetterprognose erstellen. Basierend auf vorgehende Werke von Saltzman startete Lorenz mit den hyrodynamischen Gleichungen und verfolgte ein systematisches Näherungsvorgehen, womit er auf diese drei dargestellten Gleichungen stoss.
  Die X-Achse entspricht dabei der hydrodynamischen, räumlichen Durchschnittsgeschwindigkeit, also wie wir verstanden haben, durschnittliche Windgeschwindigkeit. 
 Die Y-Achse repräsentiert die Temperatur und die Z-Achse der Temperaturgradient. Also wie schnell sich die Temperatur verändert. 
 
@@ -20,9 +20,10 @@ Die Y-Achse repräsentiert die Temperatur und die Z-Achse der Temperaturgradient
 		* rho: Rayleigh nr. = Wärmeausdehnung / Viskosität
 		* beta: Wärmeausdehnung
 		Auf Whiteboard/Tafel schreiben
+
 Falls es euch interessiert, das gesamte Berechnen der Koordinaten geschieht in dieser Funktion (Calculate in App.js). Es ist eine Schlaufe, mit welcher wir numerische Lösungen für diese Differentialgleichungen finden. Der Startwert setzten wir dabei auf 0.1.
 
-# Einwirkungen auf Zelle
+# Einwirkungen auf Zelle (Matt)
 Die stärksten Einflüsse auf die Winde in der Zelle haben Dichte und Temparatur-Unterschiede. Dies kann sowohl zu Steigwinden als auch zu Landwinden (Horizontalwinde) führen. Die Gravitation spielt hier auch eine Rolle, denn sie lässt warme Luft aufsteigen und kalte absinken. Zu guter Letzt, wirkt die Koroliskraft indem sie Winde ablenkt entgegen des Equators.
 
 # Chaostheorie (Matt)
