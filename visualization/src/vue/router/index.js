@@ -1,7 +1,8 @@
 import Visualization from '@/vue/components/Visualize';
-import Explanation from '@/vue/components/Explanation';
+// import Explanation from '@/vue/components/Explanation';
 import About from '@/vue/components/About';
 import Mandelbrot from '@/vue/components/Mandelbrot';
+
 export default [
   {
     path: '/',
@@ -11,22 +12,21 @@ export default [
   },
   {
     path: '/chaotic',
-    name: 'Visualisierung',
+    name: 'Chaotisches Verhalten',
     component: Visualization,
     props: { rho: 22, sigma: 10, beta: 8 / 3, disabled: false },
   },
   {
     path: '/stable',
-    name: 'Visualisierung',
+    name: 'Stabilies Verhalten',
     component: Visualization,
     props: { rho: 24.7, sigma: 10, beta: 8 / 3, disabled: false },
   },
-
-  /*{
+  /* {
     path: '/explanation',
     name: 'Beschreibung',
     component: Explanation,
-  },*/
+  }, */
   {
     path: '/mandelbrot',
     name: 'Mandelbrot Gif',
