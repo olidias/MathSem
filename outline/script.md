@@ -27,19 +27,19 @@ Falls es euch interessiert, das gesamte Berechnen der Koordinaten geschieht in d
 Die stärksten Einflüsse auf die Winde in der Zelle haben Dichte und Temparatur-Unterschiede. Dies kann sowohl zu Steigwinden als auch zu Landwinden (Horizontalwinde) führen. Die Gravitation spielt hier auch eine Rolle, denn sie lässt warme Luft aufsteigen und kalte absinken. Zu guter Letzt, wirkt die Koroliskraft indem sie Winde ablenkt entgegen des Equators.
 
 # Chaostheorie (Matt)
+Mit den folgenden zwei Beispielen möchten wir euch die Chaostheorie näher bringen. Diese Theorie besagt, dass kleine Werteänderungen an den Anfangsparametern grosse Auswirkungen auf das Ergebnis haben. Ausserdem ist aus den Parametern nicht vorhersagbar wie die Form des Plottes aussehen wird, da die Form auf dem Plott sehr viele verschiedene Formen annehemen kann.
+
 ## Szenario 1 (instabiles, chaotisches Verhalten)
 Wenn wir das rho hier um 1 erhöhen bekommen wir ganz anderes Muster, das keine Gemeinsamkeiten mit dem letzten Systemwerte hat. Hier sind wir in einem instabilen Bereich des Attraktors in welchem er chaotisches Verhalten zeigt.
-# Szenario 2 (stabiles Verhalten)
 
+## Szenario 2 (stabiles Verhalten)
 Als zweites Beispiel, möchten wir einen stabilen Wertebereich zeigen bei wessen sich die Form mit Paramteränderungen wenig ändert und die zwei Flügel des Plottes schön ersichtlich sind.
 Man beachte, dass die die y-komponente des letzten Punktes vorher positiv war, danach negativ. Auch wenn rho danach auf 24.69 gesetzt wird(delta -0.01) verändert sich die Form um den letzten Punkt erheblich. Der letzte Punkt befindet sich ganz an einem anderen Ort -> chaotisches Verhalten (minimste Parameteränderungen führen zu grossen Änderungen der Werte)
 Dennoch bleibt Grundform des Modells aber erhalten.
-Mit diesen zwei Beispielen wollten wir euch die Chaostheorie näher bringen. Diese Theorie besagt, dass kleine Werteänderungen an den Anfangsparametern grosse Auswirkungen auf das Ergebnis haben. Ausserdem ist aus den Parametern nicht vorhersagbar wie die Form des Plottes aussehen wird, da die Form auf dem Plott sehr viele verschiedene Formen annehemen kann.
-
 
 # Wie war das mit dem Schmetterling? (Oli)
 
-* Wie wir eben gesehen haben, sind grosse Sprünge und chaotisches Verhalten in diesem Modell enthalten. Ist an dieser Aussage bezüglich dem Schmetterling also trotzdem etwas dran?
+Wie wir eben gesehen haben, sind grosse Sprünge und chaotisches Verhalten in diesem Modell enthalten. Ist an dieser Aussage bezüglich dem Schmetterling also trotzdem etwas dran?
 Bezogen auf das Lorenzmodell ist diese Theorie möglich. Es ist aber gemäss dem Modell nicht möglich definitiv zu sagen, was ein Tornado ausgelöst hat. Gerade durch das chaotische Verhalten ist es unmöglich auf solch kleine Events zurückzurechnen, selbst wenn man alle benötigten Daten hätte.
 Im Bezug auf die Realität ist diese romantische Geschichte allerdings nicht möglich. Der Grund ist, dass ein Flügelschlag eines Schmetterlings in einem solch grossen System wie das Wetter so insignifikant ist, dass es keine Auswirkungen haben kann. 
 Im Modell wurden wichtige Faktoren wie die Luftfeuchtigkeit oder andere Gegebenheiten wie die Wolken oder die Albedo nicht modelliert, deshalb kann es nicht für die Prognose des Wetters benutzt werden. Die wichtigste Aussage des Modells ist aber, dass das Wetter ein chaotisches Verhalten hat, und deshalb Prognosen nur auf limitierte Zeitdauer gemacht werden können. 

@@ -1,4 +1,4 @@
-  <template>
+<template>
   <article>
     <header>
       <h1>Über den Lorenz Attraktor</h1>

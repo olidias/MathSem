@@ -32,22 +32,25 @@
     <div id="WHS-Playground"/>
     <div id="caption">
       <p>
-        <label id="x-axis" style="color:red;">X-Achse:</label> <label> Durchschn. Windgeschwindigkeit</label>
+        <label id="x-axis" style="color:red;">X-Achse:</label>
+        <label> Durchschn. Windgeschwindigkeit</label>
       </p>
       <p>
-        <label id="y-axis" style="color:green;">Y-Achse:</label> <label>Temperatur</label>
+        <label id="y-axis" style="color:green;">Y-Achse:</label>
+        <label>Temperatur</label>
       </p>
       <p>
-        <label id="z-axis" style="color:blue;">Z-Achse:</label> <label>Temperaturgradient</label>
+        <label id="z-axis" style="color:blue;">Z-Achse:</label>
+        <label>Temperaturgradient</label>
       </p>
     </div>
   </div>
 </template>
 
 <script>
-import * as WHS from '../../whs/App';
+  import * as WHS from '../../whs/App';
 
-const app = new WHS.WHSApp();
+  const app = new WHS.WHSApp();
 
 export default {
   name: 'Visualize',
@@ -100,9 +103,6 @@ export default {
     color: #FFF;
   }
 
-  .form-control-plaintext {
-    color: white;
-  }
   #caption{
     position: absolute;
     margin: -11rem 0 0 1.5rem;
