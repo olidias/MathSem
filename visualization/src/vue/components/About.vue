@@ -10,7 +10,7 @@
       <main>
         <p>
           Dieses Handout wurde während dem Mathematik Seminar im Frühjahressemester 18 von
-          Matthias Baumann und Oli Diaz.
+          Matthias Baumann und Oli Dias erstellt.
         </p>
         <p>
           Wir haben dieses interaktive Handout erstellt für euch, zum verstehen wie

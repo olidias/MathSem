@@ -1,7 +1,7 @@
 import Visualization from '@/vue/components/Visualize';
 import Explanation from '@/vue/components/Explanation';
 import About from '@/vue/components/About';
-
+import Mandelbrot from '@/vue/components/Mandelbrot';
 export default [
   {
     path: '/',
@@ -21,11 +21,17 @@ export default [
     component: Visualization,
     props: { rho: 24.7, sigma: 10, beta: 8 / 3, disabled: false },
   },
+
   /*{
     path: '/explanation',
     name: 'Beschreibung',
     component: Explanation,
   },*/
+  {
+    path: '/mandelbrot',
+    name: 'Mandelbrot Gif',
+    component: Mandelbrot,
+  },
   {
     path: '/about',
     name: 'Über dieses Handout',
