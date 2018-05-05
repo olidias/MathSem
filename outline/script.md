@@ -33,5 +33,5 @@ Mit diesen zwei Beispielen wollten wir euch die Chaostheorie näher bringen. Die
 
 # Ausblick (Matt)
 Zwar ist dieses System kein komplettes Klimamodell. Auch fehlen dem Modell viele Faktoren und äussere Einflüsse auf die Klimazelle.
-Nichts desto trotz, ist dieses Model das Erste Modell das chaotisches Verhalten nachbilden konnte mit einfachen und verständlichen Parametern arbeitet um ein Wettermodell im Einfachen zu veranschaulichen.
+Nichts desto trotz, ist dieses Model das Erste Modell das chaotisches Verhalten nachbilden konnte mit einfachen und verständlichen Parametern arbeitet um ein Wettermodell im Einfachen zu veranschaulichen, ohne Nebengeräusche wie Wolken, Strahlung, Vegeation und Städte.
 Dieses Modell wird noch heute gebraucht, auch wenn nicht für die Klimatologie, zum Beispiel in der Elektronikindustrie.
