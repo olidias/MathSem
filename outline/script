@@ -1,0 +1,26 @@
+# Introduction
+Edward Lorenz brachte im Jahre 1972 ein Paper mit dem Titel: Löst ein Flügelschlag eines Schmetterlings in Brasilien ein Tornado in Texas aus? " heraus. Aussergewöhnlicherweise stoss dieses Paper auf reges Interesse in der Bevölkerung. Dieser Effekt wird Butterfly Effect genannt und wird gerne für ein allgemeines Konzept für 'kleine Ereignisse, die grosse und weitverbreitete Konsequenzen haben' verwendet. Sogar in Filmen wie Mr.Nobody/The butterfly effect und Bücher kommt der Butterfly Effect vor. Wir wollen uns nun konkret damit befassen und sehen, ob wirklich etwas dran ist.
+
+# Attractor
+Menge von Werten, zu welcher sich ein System zu entwickeln tendiert. 
+Strange attraktor: zum einen wiedererkennbares System (attraktor), aber innerhalb des Systems können sich zwei Punkte zum einen Zeitpunkt unmittelbar nebeneinander befinden und im anderen weit weg voneinander. Das heisst also, kleinste Parameteränderungen haben eine grosse Unterschiede zur vorherigen Lösungen zur Folge. Dies hat auch mit Fraktalen zu tun, denn auch diese haben wiederkehrende Muster. Berühmte Fraktale sind Mandelbrot Fraktale // Insert gif!
+
+
+# Analyse der Gleichungen
+Diese Gleichungen enthalten die Dichte, Geschwindigkeit und Temperatur der Atmosphäre und stellen diese physikalischen Werte formalisiert dar. Er wollte daraus nun ein Modell zur Wetterprognose erstellen. Basierend auf vorgehende Werke von Saltzman startete Lorenz mit den hyrodynamischen Gleichungen und verfolgte ein systematisches Näherungsvorgehen, womit er auf diese drei dargestellten Gleichungen stoss. 
+
+	* Parameter erläutern
+		* sigma: Prandtl nr. = Viskosität / Wärmeleitungskoeffizient
+		* rho: Rayleigh nr. = Wärmeausdehnung / Viskosität
+		* beta: Wärmeausdehnung
+		Auf Whiteboard/Tafel schreiben
+
+
+
+
+
+
+
+# Wie war das mit dem Schmetterling?
+* Wie wir eben gesehen haben, sind grosse Sprünge und chaotisches Verhalten in diesem Modell enthalten. Ist an dieser Aussage bezüglich dem Schmetterling also trotzdem etwas dran?
+	* Bezogen auf das Lorenzmodell ist diese Theorie möglich, da aber wichtige Faktoren wie die Luftfeuchtigkeit oder auch die Wolken nicht modelliert sind, ist es leider nicht definitiv möglich zu sagen, was ein Tornado ausgelöst hat. Gerade durch das chaotische Verhalten ist es unmöglich auf solch kleine Events zurückzurechnen, selbst wenn man alle benötigten Daten hätte.
