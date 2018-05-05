@@ -19,10 +19,12 @@ Diese Gleichungen enthalten die Dichte, Geschwindigkeit und Temperatur der Atmos
 Die stärksten Einflüsse auf die Winde in der Zelle haben Dichte und Temparatur-Unterschiede. Dies kann sowohl zu Steigwinden als auch zu Landwinden (Horizontalwinde) führen. Die Gravitation spielt hier auch eine Rolle, denn sie lässt warme Luft aufsteigen und kalte absinken. Zu guter Letzt, wirkt die Koroliskraft indem sie Winde ablenkt entgegen des Equators.
 
 # Chaostheorie (Matt)
-## Szenario 1
-Wenn wir das rho hier um 1 erhöhen bekommen wir ganz anderes Muster, das keine Gemeinsamkeiten mit dem letzten Systemwerte hat.
-# Szenario 2
-Als zweites Beispiel, man beachte, dass die die y-komponente des letzten Punktes vorher positiv war, danach negativ. Auch wenn rho danach auf 24.69 gesetzt wird(delta -0.01) verändert sich die Form um den letzten Punkt erheblich. Der letzte Punkt befindet sich ganz an einem anderen Ort -> chaotisches Verhalten (minimste Parameteränderungen führen zu grossen Änderungen der Werte)
+## Szenario 1 (instabiles, chaotisches Verhalten)
+Wenn wir das rho hier um 1 erhöhen bekommen wir ganz anderes Muster, das keine Gemeinsamkeiten mit dem letzten Systemwerte hat. Hier sind wir in einem instabilen Bereich des Attraktors in welchem er chaotisches Verhalten zeigt.
+# Szenario 2 (stabiles Verhalten)
+
+Als zweites Beispiel, möchten wir einen stabilen Wertebereich zeigen bei wessen sich die Form mit Paramteränderungen wenig ändert und die zwei Flügel des Plottes schön ersichtlich sind.
+Man beachte, dass die die y-komponente des letzten Punktes vorher positiv war, danach negativ. Auch wenn rho danach auf 24.69 gesetzt wird(delta -0.01) verändert sich die Form um den letzten Punkt erheblich. Der letzte Punkt befindet sich ganz an einem anderen Ort -> chaotisches Verhalten (minimste Parameteränderungen führen zu grossen Änderungen der Werte)
 Dennoch bleibt Grundform des Modells aber erhalten.
 Mit diesen zwei Beispielen wollten wir euch die Chaostheorie näher bringen. Diese Theorie besagt, dass kleine Werteänderungen an den Anfangsparametern grosse Auswirkungen auf das Ergebnis haben. Ausserdem ist aus den Parametern nicht vorhersagbar wie die Form des Plottes aussehen wird, da die Form auf dem Plott sehr viele verschiedene Formen annehemen kann.
 
