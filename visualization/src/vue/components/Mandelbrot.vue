@@ -6,7 +6,7 @@
     <section>
       <main>
         <p>
-          <img src="../assets/img/mandelbrot.gif" alt="Mandelbrot gif"/>
+          <img src="../assets/img/mandelbrot.gif" alt="Mandelbrot gif"> </img>
         </p>
       </main>
     </section>
