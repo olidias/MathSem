@@ -9,14 +9,31 @@
 \usepackage{graphicx}
 \usepackage{subfiles}
 \usepackage{hyperref}
-
+\usepackage{parskip}
+\usepackage{listings}
+\usepackage{multirow}
 
 \title{Lorenz Attraktor}
-\subtitle{Eine praktische Analyse}
-\author[Baumann, Dias]
-{Matthias Baumann \and Oli Dias}
+\author{Matthias Baumann \and Oli Dias}
 \date{\today}
-\subject{Lorenz Equations}
+
+\newenvironment{centerFigure}[1][]{
+	\begin{figure}[h]
+	\begin{center}
+	\def\tempa{#1}
+}{
+	% Tests whether tempa set and add caption, if unset use content in {} brackets \detokenize{}
+	\if\tempa\empty\else\caption{\tempa}\let\tempa\undefined\fi  % remove tempa again
+	\end{center}
+	\end{figure}
+}
+
+\lstset{language=Java}  
 
 \begin{document}
+	\maketitle
+	\tableofcontents
+	\subfile{chaostheorie/chaostheorie}
+	\subfile{implementation}
+	\subfile{loesungen}
 \end{document}
