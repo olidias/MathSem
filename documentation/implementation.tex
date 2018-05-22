@@ -5,6 +5,21 @@
 \documentclass[implementation]{subfiles} 
 
 \begin{document}
+	\section{Analyse der Gleichungen}
+	Die Gleichungen, welche das Lorenz-Modell beschreiben, enthalten viele physikalische Eigenschaften wie die Dichte, Geschwindigkeit und Temperatur der Atmosphäre und stellen diese physikalischen Werte formalisiert dar. Lorenz wollte aus den bereits existierenden Gleichungen der Hydrodynamik ein Modell zur Wetterprognose erstellen. Basierend auf vorgehende Werke von Saltzman startete Lorenz mit den hyrodynamischen Gleichungen und verfolgte ein systematisches Näherungsvorgehen, womit er auf die folgenden drei Gleichungen stoss:
+		
+		\begin{centerFigure}
+			\begin{align}
+			\dot{x} &= \sigma(x - y)\\
+			\dot{y} &= x(\rho - z) - y\\
+			\dot{z} &= xy - \beta z
+			\end{align}
+		\end{centerFigure}
+		
+	Die X-Achse entspricht dabei der hydrodynamischen, räumlichen Durchschnittsgeschwindigkeit, also wie wir verstanden haben, durschnittliche Windgeschwindigkeit. 
+	Die Y-Achse repräsentiert die Temperatur und die Z-Achse der Temperaturgradient. Also wie schnell sich die Temperatur verändert. 
+	%TODO Parameter erläutern
+	
 	\subsection{Implementation}
 	
 	\paragraph{Lorenz-System}
@@ -17,14 +32,7 @@
 		y(t + 1) &= \frac{\delta LG}{\delta t} * \Delta + y(t) & LG = Lorenzgleichung
 	\end{align}
 	
-	Dieses Verfahren kann auf alle Gleichungen des Lorenz-Systems angewendet werden. Zum Vergleich das Lorenz-System ist definiert als:
-	\begin{centerFigure}
-		\begin{align}
-			\frac{\delta x}{\delta t} &= \sigma(x - y)\\
-			\frac{\delta y}{\delta t} &= x(\rho - z) - y\\
-			\frac{\delta z}{\delta t} &= xy - \beta z
-		\end{align}
-	\end{centerFigure}
+	Dieses Verfahren kann auf alle Koordinaten des Lorenz-Systems angewendet werden.
 
 	Eingefügt in die Gleichung \eqref{LGResult} ergibt sich folgendes System:
 	
